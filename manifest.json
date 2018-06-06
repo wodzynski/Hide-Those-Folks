@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "Hide those folks - extension",
+    "description": "Hides sidebar with friends list. Leaves chat windows on.",
+    "version": "1.0",
+    "content_scripts": [{
+        "matches": [
+            "http://www.facebook.com/*",
+            "https://www.facebook.com/*"
+        ],
+        "js": [
+            "main.js"
+        ],
+        "run_at": "document_end"
+    }],
+    "permissions": [
+        "activeTab",
+        "https://ajax.googleapis.com/"
+    ],
+    "icons": {
+        "16": "images/user_16.png",
+        "32": "images/user_32.png",
+        "48": "images/user_48.png",
+        "128": "images/user_128.png"
+    },
+    "page_action": {
+        "default_icon": {
+            "16": "images/user_16.png",
+            "32": "images/user_32.png",
+            "48": "images/user_48.png",
+            "128": "images/user_128.png"
+        }
+    }
+}
